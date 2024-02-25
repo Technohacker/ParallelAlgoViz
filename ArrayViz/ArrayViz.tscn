@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://bebesov72r60s"]
+
+[ext_resource type="Theme" uid="uid://dmeqvrvfvivd" path="res://Theme.tres" id="1_f2jir"]
+[ext_resource type="Script" path="res://ArrayViz/ArrayViz.gd" id="2_3tbnl"]
+
+[node name="ArrayViz" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f2jir")
+script = ExtResource("2_3tbnl")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="Nodes" type="GridContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 8
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

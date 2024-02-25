@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dmeqvrvfvivd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odhn5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea54o"]
+bg_color = Color(0.811765, 0.811765, 0.811765, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+Button/font_sizes/font_size = 32
+Label/font_sizes/font_size = 48
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_odhn5")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_ea54o")

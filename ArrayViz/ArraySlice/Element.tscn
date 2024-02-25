@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://is8d1yyy2lq5"]
+
+[node name="Element" type="ProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+fill_mode = 3
+show_percentage = false

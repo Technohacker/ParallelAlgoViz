@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://diefjtdhqs7na"]
+
+[ext_resource type="Theme" uid="uid://dmeqvrvfvivd" path="res://Theme.tres" id="1_5cai8"]
+[ext_resource type="Script" path="res://Main.gd" id="1_88gsd"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5cai8")
+script = ExtResource("1_88gsd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NumProcessors" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+text = "16"
+placeholder_text = "Num Processors"
+caret_multiple = false
+
+[node name="ElementsPerProcessor" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 36)
+layout_mode = 2
+text = "16"
+placeholder_text = "Num Elements/Processor"
+
+[node name="Search" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Search (Serial)
+"
+
+[node name="Search2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Search (Parallel)"
+
+[node name="OddEven" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Merge Sort"
+
+[node name="OddEven2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Odd-Even Sort"
+
+[node name="QuickSort" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QuickSort"
+
+[connection signal="pressed" from="VBoxContainer/Search" to="." method="load_array_script_serial" binds= ["res://Algorithms/Search.gd"]]
+[connection signal="pressed" from="VBoxContainer/Search2" to="." method="load_array_script" binds= ["res://Algorithms/Search.gd"]]
+[connection signal="pressed" from="VBoxContainer/OddEven" to="." method="load_array_script_serial" binds= ["res://Algorithms/Sort/OddEvenSort.gd"]]
+[connection signal="pressed" from="VBoxContainer/OddEven2" to="." method="load_array_script" binds= ["res://Algorithms/Sort/OddEvenSort.gd"]]
+[connection signal="pressed" from="VBoxContainer/QuickSort" to="." method="load_array_script_serial" binds= ["res://Algorithms/Sort/QuickSort.gd"]]
